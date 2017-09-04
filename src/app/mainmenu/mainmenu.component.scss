@@ -1,9 +1,7 @@
 .menu {
-    border-right: 2px solid ;
+    border-right: 1px solid #e3e3e3;
     min-height: 100%;
     padding-left: 10%;
-    padding-right: 20px;
-    padding-top: 30px;
 }
 
 .mobilemenu {
@@ -49,13 +47,14 @@ p {
     line-height: 14px;
     outline: none;
     padding: 7px;
-    padding-left: 10px;
+    padding-left: 5px;
     color: #999;
     font-weight: 600;
     border-radius: 20px;
     text-decoration: none;
     display: block;
     margin-top: 0;
+    margin-bottom: 6px;
 }
 
 .fa {
@@ -94,7 +93,10 @@ li {
 }
 
 ul {
+    margin-left: -8px;
     padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .inline {
