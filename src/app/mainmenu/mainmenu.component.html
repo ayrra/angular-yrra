@@ -1,12 +1,14 @@
-<div class="menu" class.sm="mobilemenu" class.xs="mobilemenu">
-  <img class="portrait" src="assets/images/rover.jpg" alt="Portrait">
+<div class="menu" class.md="mobilemenu" class.sm="mobilemenu" class.xs="mobilemenu">
+  <img class="portrait" src="assets/images/headshot.jpeg" alt="Portrait">
   <h1>Andres Yrra</h1>
   <h2>Web Developer</h2>
   <h3>San Diego, California</h3>
   
   <div fxLayout="column"
+    fxLayoutAlign.md="center"
     fxLayoutAlign.sm="center"
     fxLayoutAlign.xs="center"
+    fxLayout.md="row"
     fxLayout.sm="row"
     fxLayout.xs="row"
     fxLayoutGap="0"
@@ -16,14 +18,5 @@
     <p>Stuff</p>
     <p>Contact</p>
   </div>
-    
-  <div fxHide.gt-sm fxHide.gt-xs> 
-    <ul>
-      <li><a class="fa fa-linkedin" target="_blank" href="https://linkedin.com/in/ayrra/"></a></li>
-      <li><a class="fa fa-github" target="_blank" href="https://www.github.com/ayrra"></a></li>
-      <li><a class="fa fa-envelope" target="_blank" href="mailto:andy@yrra.net"></a></li>
-      <li><a class="fa fa-facebook" target="_blank" href="https://www.facebook.com/andres.yrra"></a></li>
-      <li><a class="fa fa-flickr" target="_blank" href="https://www.flickr.com/7_u"></a></li>
-    </ul>
-  </div>
+  <app-socialfooter></app-socialfooter>
 </div>

@@ -10,12 +10,16 @@ import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { ContentComponent } from './content/content.component';
 
 import 'hammerjs';
+import { SocialfooterComponent } from './socialfooter/socialfooter.component';
+import { MobilesocialfooterComponent } from './mobilesocialfooter/mobilesocialfooter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainmenuComponent,
-    ContentComponent
+    ContentComponent,
+    SocialfooterComponent,
+    MobilesocialfooterComponent
   ],
   imports: [
     BrowserModule,
