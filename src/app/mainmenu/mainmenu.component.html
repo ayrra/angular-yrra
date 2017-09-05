@@ -1,5 +1,5 @@
 <div class="menu" class.md="mobilemenu" class.sm="mobilemenu" class.xs="mobilemenu">
-  <img class="portrait" src="assets/images/headshot.jpeg" alt="Portrait">
+  <a routerLink="/home"><img class="portrait" src="assets/images/headshot.jpeg" alt="Portrait"></a>
   <h1>Andres Yrra</h1>
   <h2>Web Developer</h2>
   <h3>San Diego, California</h3>
@@ -14,9 +14,9 @@
     fxLayoutGap="0"
     class.sm="mobilemenu"
     class.xs="mobilemenu">
-    <a routerLink="/blog" routerLinkActive="active">Blog</a>
-    <a routerLink="/stuff" routerLinkActive="active">Stuff</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    <a class="links" routerLink="/blog" routerLinkActive="active">Blog</a>
+    <a class="links" routerLink="/stuff" routerLinkActive="active">Stuff</a>
+    <a class="links" routerLink="/contact" routerLinkActive="active">Contact</a>
   </div>
   <app-socialfooter></app-socialfooter>
 </div>
