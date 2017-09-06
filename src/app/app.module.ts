@@ -6,6 +6,9 @@ import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 
+import {RestangularModule, Restangular} from 'ngx-restangular';
+import {RestangularConfigFactory} from './shared/restConfig';
+
 import { AppComponent } from './app.component';
 import { MainmenuComponent } from './mainmenu/mainmenu.component';
 import { ContentComponent } from './content/content.component';
@@ -18,6 +21,12 @@ import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { StuffComponent } from './stuff/stuff.component';
 import { ContactComponent } from './contact/contact.component';
+import { BlogpostComponent } from './blogpost/blogpost.component';
+
+import {BlogService} from './services/blog.service';
+
+import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
+
 
 @NgModule({
   declarations: [
@@ -29,16 +38,19 @@ import { ContactComponent } from './contact/contact.component';
     HomeComponent,
     BlogComponent,
     StuffComponent,
-    ContactComponent
+    ContactComponent,
+    BlogpostComponent,
+    EscapeHtmlPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

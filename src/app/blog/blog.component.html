@@ -6,17 +6,12 @@
     </div>
   </div>
   <hr fxShow fxHide.gt-md />
-  <div class.md="mobile" class.sm="mobile" class.xs="mobile">
-      <a routerLink="/home"><h2 class="blogtext" class.md="blogtextmobile" class.sm="blogtextmobile" class.xs="blogtextmobile">New Site!!!</h2></a>
+  <div *ngFor="let post of posts">
+    <div class.md="mobile" class.sm="mobile" class.xs="mobile" >
+      <a [routerLink]="['/blog', post.seq]"><h2 class="blogtext" class.md="blogtextmobile" class.sm="blogtextmobile" class.xs="blogtextmobile">{{post.title}}</h2></a>
+    </div>
+    <hr/>
   </div>
-  <hr/>
-  <div class.md="mobile" class.sm="mobile" class.xs="mobile">
-    <a routerLink="/home"><h2 class="blogtext" class.md="blogtextmobile" class.sm="blogtextmobile" class.xs="blogtextmobile">New Site!!!</h2></a>
-  </div>
-  <hr/>
-  <div class.md="mobile" class.sm="mobile" class.xs="mobile">
-      <a routerLink="/home"><h2 class="blogtext" class.md="blogtextmobile" class.sm="blogtextmobile" class.xs="blogtextmobile">New Site!!!</h2></a>
-  </div>
-  <hr/>
+
 
 </div>
