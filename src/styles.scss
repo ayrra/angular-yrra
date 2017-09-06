@@ -28,6 +28,10 @@ body {
     padding-bottom: 15%;
 }
 
+a {
+    text-decoration: none;
+}
+
 .contentmobile {
     display: flex;
     flex-direction: column;
@@ -35,7 +39,13 @@ body {
     justify-content: center;
 }
 
-.headercontainer {
+.blogcontainer {
     border-left: 1px solid #e3e3e3;
     padding-bottom: 15%;
+}
+
+
+.headercontainer {
+    padding: 30px 0 30px 50px;
+    border-bottom: 1px solid #e3e3e3;
 }

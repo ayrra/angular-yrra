@@ -1,0 +1,51 @@
+
+h1 {
+    margin: 0;
+    color: #3a3a3a;
+    line-height: 23px;
+}
+
+h2 {
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 23px;
+    margin-top: 10px;
+    color: #3a3a3a;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+hr {
+    margin: 0;
+    border-top: 0;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+
+.blogtext {
+    margin: 0 0 0 50px;
+    font-size: 19px;
+    line-height: 26px;
+    padding: 20px 0;
+    font-weight: bold;
+    color: black;
+}
+
+.blogtextmobile {
+    margin: 0;
+    font-size: 19px;
+    line-height: 26px;
+    padding: 20px 0;
+    font-weight: bold;
+    color: black;
+}
+
+.mobile {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.mpad {
+    margin-bottom: 30px;
+}
