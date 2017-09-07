@@ -10,12 +10,12 @@ h1 {
 }
 
 .inputfield {
-    width: 80%;
+    width: 70%;
     font-size: 16px;
 }
 
 .inputtext {
-    width: 100%;
+    width: 90%;
     font-size: 16px;
 }
 
@@ -31,4 +31,9 @@ form {
     border-radius: 20px;
     font-weight: 700;
     background: none;
+}
+
+.mobile {
+    margin: 0 auto;
+    max-width: 600px;
 }

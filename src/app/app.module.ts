@@ -29,6 +29,7 @@ import {BlogService} from './services/blog.service';
 import {EmailService} from './services/email.service';
 
 import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
     StuffComponent,
     ContactComponent,
     BlogpostComponent,
-    EscapeHtmlPipe
+    EscapeHtmlPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
