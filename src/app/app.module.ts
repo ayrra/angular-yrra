@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
@@ -24,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogpostComponent } from './blogpost/blogpost.component';
 
 import {BlogService} from './services/blog.service';
+import {EmailService} from './services/email.service';
 
 import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
 
@@ -48,9 +51,11 @@ import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
     MaterialModule,
     FlexLayoutModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [BlogService],
+  providers: [BlogService, EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

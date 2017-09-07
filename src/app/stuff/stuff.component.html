@@ -1,1 +1,28 @@
-<p>Hello stuff works!</p>
+<div class="blogcontainer">
+    <div class="headercontainer" class.md="mobile mpad" class.sm="mobile mpad" class.xs="mobile mpad">
+        <div>
+            <h1>Stuff</h1>
+            <h2>About, Projects, and Code</h2>
+        </div>
+    </div>
+    <hr fxShow fxHide.gt-md />
+    <div class="pens" class.md="mobile" class.sm="mobile" class.xs="mobile">
+        <h2 class="subtitle" class.md="mobilesub" class.sm="mobilesub" class.xs="mobilesub">About This Site!</h2>
+        <p>Hi and welcome to my personal site! I built this site as a learning experience for building a sites' front-end and back-end using javascript.</p>
+        <p>The front-end (what you see right now) is built using React and the back-end is built using Express along with MongoDB serving the database.</p>
+        <p>This site is hosted on RamNode, they've been my provider for 3 years without issue. If you are looking for hosting and would like to help me out, below is my affiliate link.</p> 
+    </div>
+    <div class="pens" class.md="mobilec" class.sm="mobilec" class.xs="mobilec">
+        <a href="https://clientarea.ramnode.com/aff.php?aff=3167"><img src="http://www.ramnode.com/images/banners/affbannerlightnewlogo.png" alt="high performance ssd vps" /></a>
+        <h2 class="subtitle" class.md="mobilesub" class.sm="mobilesub" class.xs="mobilesub">CodePens for FreeCodeCamp</h2>
+        <div [innerHTML]="tictactoe | keepHtml">Hello</div>
+        <div [innerHTML]="simon | keepHtml"></div>
+        <div [innerHTML]="pomodoro | keepHtml"></div>
+        <div [innerHTML]="calculator | keepHtml"></div>
+        <div [innerHTML]="rqg | keepHtml"></div>
+        <div [innerHTML]="weather | keepHtml"></div>
+        <div [innerHTML]="wiki | keepHtml"></div>
+        <div [innerHTML]="twitch | keepHtml"></div>
+    </div>
+</div>
+

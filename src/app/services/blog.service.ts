@@ -11,8 +11,7 @@ export class BlogService {
   constructor(private restangular: Restangular) { }
 
   getPosts(): Observable<Post[]> {
-    let x = this.restangular.all('blog').getList();
-    return x;
+    return this.restangular.all('blog').getList();
   }
 
   getPost(seq: number): Observable<Post> {

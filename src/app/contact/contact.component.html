@@ -1,3 +1,22 @@
-<p>
-  contact works!
-</p>
+<div class="blogcontainer">
+  <h1>Contact Me</h1>
+
+  <form novalidate [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <p>
+      <md-input-container class="inputfield">
+        <input mdInput formControlName="email" placeholder="Your Email*" type="email">
+      </md-input-container>
+    </p>
+    <p>
+      <md-input-container class="inputfield">
+        <input mdInput formControlName="name" placeholder="Your Name*" type="text">
+      </md-input-container>
+    </p>
+    <p>
+      <md-input-container class="inputtext">
+        <textarea mdInput formControlName="message" placeholder="Your Message*" rows=10></textarea>
+      </md-input-container>
+    </p>
+    <button md-button type="submit" class="subbutton" [disabled]="contactForm.invalid">Submit</button>
+  </form>
+</div>

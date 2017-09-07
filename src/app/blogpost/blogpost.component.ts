@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import {ActivatedRoute, Params} from '@angular/router';
 
-import {DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
-
 import 'rxjs/add/operator/switchmap';
 
 import {Post} from '../shared/post';
@@ -19,7 +17,7 @@ export class BlogpostComponent implements OnInit {
 
   post: Post;
 
-  constructor(private blogservice: BlogService, private route: ActivatedRoute, private sanitizer: DomSanitizer) { }
+  constructor(private blogservice: BlogService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params
