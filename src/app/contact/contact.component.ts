@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import {Email} from '../shared/email';
 import {EmailService} from '../services/email.service';
+import {LoginService} from '../services/login.service';
 
 import {FormBuilder, FormGroup, Validators, FormGroupDirective} from '@angular/forms';
 
@@ -14,11 +15,10 @@ export class ContactComponent implements OnInit {
 
   contactForm: FormGroup;
   email: Email;
-  response: Email;
   @ViewChild(FormGroupDirective) contactFormDirective;
 
 
-  constructor(private fb: FormBuilder, private emailservice: EmailService) {
+  constructor(private fb: FormBuilder, private emailservice: EmailService, private loginservice: LoginService) {
     this.createForm();
    }
 
@@ -35,7 +35,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    
     this.email = this.contactForm.value;
     this.emailservice.sendEmail(this.email);
   }

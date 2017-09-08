@@ -1,3 +1,22 @@
-<p>
-  login works!
-</p>
+<div class="blogcontainer" class.md="mobile" class.sm="mobile" class.xs="mobile" *ngIf="!loggedIn()">
+    <h1>Login</h1>
+  
+    <form novalidate [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <p>
+        <md-input-container class="inputfield">
+          <input mdInput formControlName="username" placeholder="Username*" type="email">
+        </md-input-container>
+      </p>
+      <p>
+        <md-input-container class="inputfield">
+          <input mdInput formControlName="password" placeholder="Password*" type="password">
+        </md-input-container>
+      </p>
+      <button md-button type="submit" class="subbutton" [disabled]="loginForm.invalid">Login</button>
+    </form>
+</div>
+
+<div class="blogcontainer" class.md="mobile" class.sm="mobile" class.xs="mobile" *ngIf="loggedIn()">
+  <h1>Login</h1>
+  <h3>You are now logged on!</h3>
+</div>

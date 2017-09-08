@@ -27,6 +27,7 @@ import { BlogpostComponent } from './blogpost/blogpost.component';
 
 import {BlogService} from './services/blog.service';
 import {EmailService} from './services/email.service';
+import {LoginService} from './services/login.service';
 
 import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
 import { LoginComponent } from './login/login.component';
@@ -57,7 +58,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [BlogService, EmailService],
+  providers: [BlogService, EmailService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
