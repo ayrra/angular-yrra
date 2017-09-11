@@ -7,6 +7,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import {MdDatepickerModule} from '@angular/material';
+import {MdNativeDateModule} from '@angular/material';
 
 import {RestangularModule, Restangular} from 'ngx-restangular';
 import {RestangularConfigFactory} from './shared/restConfig';
@@ -31,6 +33,8 @@ import {LoginService} from './services/login.service';
 
 import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
 import { LoginComponent } from './login/login.component';
+import { NewpostComponent } from './newpost/newpost.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 
 
 @NgModule({
@@ -46,7 +50,9 @@ import { LoginComponent } from './login/login.component';
     ContactComponent,
     BlogpostComponent,
     EscapeHtmlPipe,
-    LoginComponent
+    LoginComponent,
+    NewpostComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,8 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    MdDatepickerModule,
+    MdNativeDateModule,
     RestangularModule.forRoot(RestangularConfigFactory)
   ],
   providers: [BlogService, EmailService, LoginService],

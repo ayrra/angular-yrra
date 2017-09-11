@@ -20,4 +20,8 @@ export class LoginService {
     return this.token;
   }
 
+  destroyToken() {
+    this.token = undefined;
+  }
+
 }

@@ -17,6 +17,10 @@
     <a class="links" routerLink="/blog" routerLinkActive="active">Blog</a>
     <a class="links" routerLink="/stuff" routerLinkActive="active">Stuff</a>
     <a class="links" routerLink="/contact" routerLinkActive="active">Contact</a>
+    <div *ngIf="loggedIn()">
+      <a class="links" routerLink="/newpost" routerLinkActive="active">New Post</a>
+      <button class="butlink" (click)="logOff()">Log Off</button>
+    </div>
   </div>
   <app-socialfooter></app-socialfooter>
 </div>
