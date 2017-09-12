@@ -12,9 +12,7 @@
               <input mdInput formControlName="title" placeholder="Title*" type="text">
             </md-input-container>
           </p>
-          <p>
-            EDITING BOX GOES HERE!
-          </p>
+            <div class="froala" formControlName="content" [froalaEditor]></div>
           <p>
               <md-input-container>
                 <input mdInput [mdDatepicker]="picker" formControlName="postedOn" placeholder="Choose a date">

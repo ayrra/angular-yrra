@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {LoginService} from '../services/login.service';
+import {BlogService} from '../services/blog.service';
 
 import {FormBuilder, FormGroup, Validators, FormGroupDirective} from '@angular/forms';
 
@@ -12,8 +13,10 @@ import {FormBuilder, FormGroup, Validators, FormGroupDirective} from '@angular/f
 export class NewpostComponent implements OnInit {
 
   postForm: FormGroup;
+  postContent: string;
+  post: Post;
 
-  constructor(private loginservice: LoginService, private fb: FormBuilder) {
+  constructor(private loginservice: LoginService, private blogservice: BlogService, private fb: FormBuilder) {
     this.createForm();
    }
 
@@ -23,12 +26,18 @@ export class NewpostComponent implements OnInit {
   createForm() {
     this.postForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(200)]],
+      content: ['', [Validators.required]],
       postedOn: [null, [Validators.required]],
     });
   }
 
   onSubmit() {
-    console.log(this.postForm.value);
+    let message = {
+      title: this.postForm.value.title,
+      bodyText: this.postForm.value.content,
+      postedOn: this.postForm.value.postedOn
+    };
+    console.log(message);
   }
 
   loggedIn() {

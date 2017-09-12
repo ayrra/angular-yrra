@@ -31,6 +31,8 @@ import {BlogService} from './services/blog.service';
 import {EmailService} from './services/email.service';
 import {LoginService} from './services/login.service';
 
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+
 import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
 import { LoginComponent } from './login/login.component';
 import { NewpostComponent } from './newpost/newpost.component';
@@ -64,6 +66,8 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
     ReactiveFormsModule,
     MdDatepickerModule,
     MdNativeDateModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot(),
     RestangularModule.forRoot(RestangularConfigFactory)
   ],
   providers: [BlogService, EmailService, LoginService],
