@@ -4,5 +4,6 @@
     <h3>Posted on {{data.postedOn | date: 'longDate'}}</h3>
   </div>
   <div class="postcontent" [innerHTML]="data.bodyText | keepHtml"></div>
+  <button md-button (click)="goBack()" class="but">Back</button>
   <button md-button *ngIf="loggedIn()" [routerLink]="['/blog', data.seq, 'edit']">Edit</button>
 </div>

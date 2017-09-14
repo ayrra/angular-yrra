@@ -11,6 +11,8 @@ import {Title} from '@angular/platform-browser';
 import {Post} from '../shared/post';
 import {BlogService} from '../services/blog.service';
 
+import {Location} from '@angular/common';
+
 
 @Component({
   selector: 'app-blogpost',
@@ -21,7 +23,7 @@ export class BlogpostComponent implements OnInit {
 
   post: Post;
 
-  constructor(private blogservice: BlogService, private loginservice: LoginService, private route: ActivatedRoute, private titleservice: Title) { }
+  constructor(private blogservice: BlogService, private loginservice: LoginService, private location: Location, private route: ActivatedRoute, private titleservice: Title) { }
 
   ngOnInit() {
     this.route.params
@@ -31,6 +33,10 @@ export class BlogpostComponent implements OnInit {
   
   loggedIn() {
     return this.loginservice.checkAuth();
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }
