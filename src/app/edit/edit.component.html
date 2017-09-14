@@ -1,0 +1,29 @@
+
+
+<div class="blogcontainer" *ngIf="loggedIn(); else show404">
+  <div class="headercontainer" class.md="mobile mpad" class.sm="mobile mpad" class.xs="mobile mpad">
+          <h1>New Post</h1>
+  </div>
+  <div class.md="mobile mpad" class.sm="mobile mpad" class.xs="mobile mpad">
+    <form novalidate [formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <p>
+          <md-input-container>
+            <input mdInput formControlName="title" placeholder="Title*" type="text">
+          </md-input-container>
+        </p>
+          <div class="froala" formControlName="content" [froalaEditor]></div>
+        <p>
+            <md-input-container>
+              <input mdInput [mdDatepicker]="picker" formControlName="postedOn" placeholder="Choose a date">
+              <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+              <md-datepicker #picker></md-datepicker>
+            </md-input-container>
+        </p>
+        <button md-button type="submit" [disabled]="postForm.invalid">Submit</button>  
+    </form>
+  </div>
+</div>
+
+<ng-template #show404>
+<app-unauthorized></app-unauthorized>
+</ng-template>

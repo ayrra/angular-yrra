@@ -37,6 +37,7 @@ import {EscapeHtmlPipe} from './pipes/keep-html.pipe';
 import { LoginComponent } from './login/login.component';
 import { NewpostComponent } from './newpost/newpost.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
     EscapeHtmlPipe,
     LoginComponent,
     NewpostComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

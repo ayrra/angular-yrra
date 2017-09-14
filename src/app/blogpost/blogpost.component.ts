@@ -4,6 +4,8 @@ import {ActivatedRoute, Params} from '@angular/router';
 
 import 'rxjs/add/operator/switchmap';
 
+import {LoginService} from '../services/login.service';
+
 import {Post} from '../shared/post';
 import {BlogService} from '../services/blog.service';
 
@@ -17,12 +19,16 @@ export class BlogpostComponent implements OnInit {
 
   post: Post;
 
-  constructor(private blogservice: BlogService, private route: ActivatedRoute) { }
+  constructor(private blogservice: BlogService, private loginservice: LoginService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params
     .switchMap((params: Params) => {return this.blogservice.getPost(+params['seq'])})
-    .subscribe(post => {this.post = post});
-
+    .subscribe(post => {this.post = post;});
   }
+  
+  loggedIn() {
+    return this.loginservice.checkAuth();
+  }
+
 }

@@ -25,4 +25,10 @@ export class BlogService {
     return this.restangular.all('blog').post(data, {}, {'x-access-token': this.loginservice.checkAuth()});
   }
 
+  editPost(data: Post): Observable<Post> {
+    let seq = data.seq;
+    delete data.seq;
+    return this.restangular.all('blog/' + seq).customPUT(data, undefined, undefined, {'x-access-token': this.loginservice.checkAuth()});
+  }
+
 }

@@ -8,11 +8,13 @@ import {BlogpostComponent} from '../blogpost/blogpost.component';
 import {LoginComponent} from '../login/login.component';
 import {NewpostComponent} from '../newpost/newpost.component';
 import {UnauthorizedComponent} from '../unauthorized/unauthorized.component';
+import {EditComponent} from '../edit/edit.component';
 
 export const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'blog', component: BlogComponent},
     {path: 'blog/:seq', component: BlogpostComponent},
+    {path: 'blog/:seq/edit', component: EditComponent},
     {path: 'stuff', component: StuffComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'rover', component: LoginComponent},
