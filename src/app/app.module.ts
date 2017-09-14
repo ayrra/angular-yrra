@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {ReactiveFormsModule} from '@angular/forms';
@@ -72,7 +72,7 @@ import { EditComponent } from './edit/edit.component';
     FroalaViewModule.forRoot(),
     RestangularModule.forRoot(RestangularConfigFactory)
   ],
-  providers: [BlogService, EmailService, LoginService],
+  providers: [BlogService, EmailService, LoginService, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

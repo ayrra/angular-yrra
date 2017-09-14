@@ -4,6 +4,8 @@ import {Email} from '../shared/email';
 import {EmailService} from '../services/email.service';
 import {LoginService} from '../services/login.service';
 
+import {Title} from '@angular/platform-browser';
+
 import {FormBuilder, FormGroup, Validators, FormGroupDirective} from '@angular/forms';
 
 @Component({
@@ -18,7 +20,8 @@ export class ContactComponent implements OnInit {
   @ViewChild(FormGroupDirective) contactFormDirective;
 
 
-  constructor(private fb: FormBuilder, private emailservice: EmailService, private loginservice: LoginService) {
+  constructor(private fb: FormBuilder, private emailservice: EmailService, private loginservice: LoginService, private titleservice: Title) {
+    this.titleservice.setTitle("Yrra.net | Contact");
     this.createForm();
    }
 

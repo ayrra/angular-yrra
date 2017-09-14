@@ -5,6 +5,8 @@ import {FormBuilder, FormGroup, Validators, FormGroupDirective} from '@angular/f
 import {LoginService} from '../services/login.service';
 import {Credentials} from '../shared/credentials';
 
+import {Title} from '@angular/platform-browser';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,11 +17,12 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   creds: Credentials;
 
-  constructor(private fb: FormBuilder, private loginservice: LoginService) {
+  constructor(private fb: FormBuilder, private loginservice: LoginService, private titleservice: Title) {
     this.createForm();
    }
 
   ngOnInit() {
+    this.titleservice.setTitle("Yrra.net | Login");
   }
 
   createForm() {

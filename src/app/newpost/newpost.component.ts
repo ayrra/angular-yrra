@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../services/login.service';
 import {BlogService} from '../services/blog.service';
 
+import {Title} from '@angular/platform-browser';
+
 import {Newpost} from '../shared/newpost';
 
 import {FormBuilder, FormGroup, Validators, FormGroupDirective} from '@angular/forms';
@@ -18,11 +20,12 @@ export class NewpostComponent implements OnInit {
   postContent: string;
   newPost: Newpost;
 
-  constructor(private loginservice: LoginService, private blogservice: BlogService, private fb: FormBuilder) {
+  constructor(private loginservice: LoginService, private blogservice: BlogService, private fb: FormBuilder, private titleservice: Title) {
     this.createForm();
    }
 
   ngOnInit() {
+    this.titleservice.setTitle("Yrra.net | New Post");
   }
 
   createForm() {

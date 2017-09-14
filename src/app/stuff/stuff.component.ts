@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {Title} from '@angular/platform-browser';
+
 @Component({
   selector: 'app-stuff',
   templateUrl: './stuff.component.html',
@@ -16,9 +18,10 @@ export class StuffComponent implements OnInit {
   wiki: string = "<iframe height='400px' scrolling='no' title='Wikipedia Viewer' src='//codepen.io/ayrra/embed/XjNRNm/?height=365&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='min-width: 60%;'>See the Pen <a href='https://codepen.io/ayrra/pen/XjNRNm/'>Wikipedia Viewer</a> by Andres Yrra (<a href='https://codepen.io/ayrra'>@ayrra</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>";
   twitch: string = "<iframe height='400px' scrolling='no' title='Using twitch.tv json v.04' src='//codepen.io/ayrra/embed/ORWbpk/?height=365&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='min-width: 60%;'>See the Pen <a href='https://codepen.io/ayrra/pen/ORWbpk/'>Using twitch.tv json v.04</a> by Andres Yrra (<a href='https://codepen.io/ayrra'>@ayrra</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>";
 
-  constructor() { }
+  constructor(private titleservice: Title) { }
 
   ngOnInit() {
+    this.titleservice.setTitle("Yrra.net | Stuff");
   }
 
 
